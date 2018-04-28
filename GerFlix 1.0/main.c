@@ -30,6 +30,16 @@ int main()
 
     //Mostrar, por cada serie, el nombre de los usuarios que la ven:
     altaUsuario(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
+    printf(" \n");
+
+    mostrarSeriesConUsuarios(listaDeSeries,TAMSERIE,listaDeUsuarios,TAMUSUARIO);
+    printf(" \n");
+
+    bajaUsuario(listaDeUsuarios, TAMUSUARIO);
+    printf(" \n");
+
+    /*
+    modificarUsuario(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);*/
     mostrarSeriesConUsuarios(listaDeSeries,TAMSERIE,listaDeUsuarios,TAMUSUARIO);
 
 

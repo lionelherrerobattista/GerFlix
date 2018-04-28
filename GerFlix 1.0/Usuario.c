@@ -80,6 +80,7 @@ void mostrarSeriesConUsuarios(eSerie series[], int cantidadSeries, eUsuario usua
     int i;//series
     int j;//usuarios
 
+    printf("\n");
     for (i=0; i<cantidadSeries; i++)
     {
         if (series[i].estado == 1)
@@ -118,10 +119,10 @@ void altaUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int 
     }
 
     //le asigno un id
-    usuario[index].idUsuario=index+100;
+    usuario[index].idUsuario=index+1000;
 
     //pido el nombre
-    printf("Ingrese su nombre:");
+    printf("Ingrese su nombre: ");
     fflush(stdin);
     gets(usuario[index].nombre);
     printf("\n");
@@ -142,5 +143,72 @@ void altaUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int 
     usuario[index].estado=1;
 
     //aviso que el usuario se dio de alta
-    printf("Se registro con exito.\n");
+    printf("\nSe registro con exito. Su id es %d",usuario[index].idUsuario);
+
+}
+
+//Modificar usuario
+void modificarUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int cantidadSeries)
+{
+    int idUsuario;
+    int i;
+    int j;
+
+    printf("Ingrese su id de usuario: ");
+    scanf("%d", &idUsuario);
+
+    for (i=0; i<cantidadUsuarios; i++)
+    {
+        if (usuario[i].idUsuario==idUsuario)
+        {
+            printf("Ingrese su nombre:");
+            fflush(stdin);
+            gets(usuario[i].nombre);
+
+            printf("\n");
+
+            for (j=0; j<cantidadSeries; j++)
+            {
+                if (series[j].estado==1)
+                {
+                    printf("%d.%s\n",series[j].idSerie, series[j].nombre);
+                }
+            }
+
+            printf("\n");
+
+            printf("Ingrese el id de la serie que desea ver: ");
+            scanf("%d", &usuario[i].idSerie);
+
+            printf("\nSe modificó el usuario.\n");
+
+            break;
+        }
+
+    }
+
+    printf("No se encontro el id.");
+}
+
+//Dar de baja usuarios
+void bajaUsuario(eUsuario usuario[], int cantidadUsuarios)
+{
+    int idUsuario;
+    int i;
+
+    //pido el id del usuario
+    printf("Ingrese el id del usuario que desea dar de baja: ");
+    scanf("%d", &idUsuario);
+
+    //busco el id y cambio el estado a 0 (baja)
+    for (i=0; i<cantidadUsuarios; i++)
+    {
+        if (usuario[i].idUsuario==idUsuario)
+        {
+            usuario[i].estado=0;
+            break;
+        }
+    }
+
+    printf("\nSe dio de baja el usuario.");
 }

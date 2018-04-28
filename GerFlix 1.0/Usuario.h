@@ -14,4 +14,6 @@ void inicializarUsuariosHardCode(eUsuario[]);
 void mostrarListaUsuarios(eUsuario[], int);
 void mostrarSeriesConUsuarios(eSerie[], int, eUsuario[], int);
 void altaUsuario(eUsuario[], int, eSerie[], int);
+void modificarUsuario(eUsuario[], int, eSerie[], int);
+void bajaUsuario(eUsuario[], int);
 
