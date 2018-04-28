@@ -29,6 +29,7 @@ int main()
     mostrarUsuarioConSuSerie(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);*/
 
     //Mostrar, por cada serie, el nombre de los usuarios que la ven:
+    altaUsuario(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
     mostrarSeriesConUsuarios(listaDeSeries,TAMSERIE,listaDeUsuarios,TAMUSUARIO);
 
 
