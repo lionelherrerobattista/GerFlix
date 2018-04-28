@@ -6,10 +6,6 @@
 
 int main()
 {
-    int i;
-    int j;
-    int index;
-
     eSerie listaDeSeries[TAMSERIE];
     eUsuario listaDeUsuarios[TAMUSUARIO];
 
@@ -19,32 +15,11 @@ int main()
     inicializarUsuariosEstado(listaDeUsuarios,TAMUSUARIO);
     inicializarUsuariosHardCode(listaDeUsuarios);
 
-    for (i=0; i<5; i++)
-    {
-      printf("%d %10s %10s %10d %10d\n", listaDeSeries[i].idSerie, listaDeSeries[i].nombre, listaDeSeries[i].genero, listaDeSeries[i].cantidadTemporadas, listaDeSeries[i].estado);
-    }
+    mostrarListaSeries(listaDeSeries, TAMSERIE);
 
-    printf(" \n");
+    printf("\n");
 
-    for (i=0; i<15; i++)
-    {
-
-      index=listaDeUsuarios[i].idSerie;
-
-      for (j=0; j<5; j++)
-      {
-          if (index == listaDeSeries[j].idSerie)
-          {
-              serie=listaDeSeries==
-          }
-
-      }
-
-
-
-      printf("%d %10s %10d %10d\n", listaDeUsuarios[i].idUsuario, listaDeUsuarios[i].nombre, listaDeUsuarios[i].idSerie, listaDeUsuarios[i].estado);
-    }
-
+    mostrarListaUsuarios(listaDeUsuarios, TAMUSUARIO);
 
 /*  1. Mostrar el listado de series
     2. Mostrar el listado de usuarios
