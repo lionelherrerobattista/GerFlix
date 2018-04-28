@@ -41,7 +41,7 @@ void inicializarSeriesHardCode(eSerie series[])
     }
 }
 
-void mostrarListaSeries(eSerie series[], int cantidad)
+/*void mostrarListaSeries(eSerie series[], int cantidad)
 {
     int i;
 
@@ -54,7 +54,9 @@ void mostrarListaSeries(eSerie series[], int cantidad)
     }
 
 
-}
+}*/
+
+
 
 
 

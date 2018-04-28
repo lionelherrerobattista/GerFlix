@@ -15,11 +15,23 @@ int main()
     inicializarUsuariosEstado(listaDeUsuarios,TAMUSUARIO);
     inicializarUsuariosHardCode(listaDeUsuarios);
 
+    /*
+    //Mostrar lista de series:
     mostrarListaSeries(listaDeSeries, TAMSERIE);
 
     printf("\n");
 
+    //Mostrar lista de usuarios:
     mostrarListaUsuarios(listaDeUsuarios, TAMUSUARIO);
+
+    //Mostrar usuario con su serie:
+
+    mostrarUsuarioConSuSerie(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);*/
+
+    //Mostrar, por cada serie, el nombre de los usuarios que la ven:
+    mostrarSeriesConUsuarios(listaDeSeries,TAMSERIE,listaDeUsuarios,TAMUSUARIO);
+
+
 
 /*  1. Mostrar el listado de series
     2. Mostrar el listado de usuarios
