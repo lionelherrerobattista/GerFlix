@@ -187,7 +187,7 @@ void modificarUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[],
 
     }
 
-    printf("No se encontro el id.");
+
 }
 
 //Dar de baja usuarios
