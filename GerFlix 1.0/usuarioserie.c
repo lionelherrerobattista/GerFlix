@@ -8,9 +8,10 @@ void mostrarUsuarioConSuSerie(eUsuario usuario[], int cantidadUsuario, eSerie se
 {
     int i;//usuario
     int j;//serie
+    int k = 1;
 
-    printf("\n%-10s", "Usuario:");
-    printf("Serie:\n");
+    printf("\n%-5s  %-15s","Nro.", "Usuario:");
+    printf("%s\n","Serie:");
 
 
     //recorro la lista, usuario por usuario
@@ -22,7 +23,8 @@ void mostrarUsuarioConSuSerie(eUsuario usuario[], int cantidadUsuario, eSerie se
             //busco que los id sean iguales
             if(usuario[i].idSerie==serie[j].idSerie && usuario[i].estado==1)
             {
-                printf("%-10s", usuario[i].nombre);
+                //tabulado a la derecha
+                printf("%-8d%-15s",k++, usuario[i].nombre);
                 printf("%s\n", serie[j].nombre);
                 break; //xq es una serie por persona
             }
@@ -59,3 +61,93 @@ void mostrarSeriesConUsuarios(eSerie series[], int cantidadSeries, eUsuario usua
 
     }
 }
+
+/*
+void altaUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int cantidadSeries)
+{
+    int index;
+    int i;
+
+
+    //busco posición libre y la guardo en index
+    for (i=0; i<cantidadUsuarios; i++)
+    {
+        if (usuario[i].idUsuario==0)
+        {
+            index=i;
+            break;
+        }
+    }
+
+    //le asigno un id
+    usuario[index].idUsuario=index+1000;
+
+    //pido el nombre
+    printf("Ingrese su nombre: ");
+    fflush(stdin);
+    gets(usuario[index].nombre);
+    printf("\n");
+
+    //le pregunto qué serie quiere ver
+    for (i=0; i<cantidadSeries; i++)
+    {
+        if (series[i].estado==1)
+        {
+            printf("%d.%s\n",series[i].idSerie, series[i].nombre);
+        }
+    }
+    printf("\n");
+    printf("Ingrese el id de la serie que desea ver: ");
+    scanf("%d", &usuario[index].idSerie);
+
+    //pongo el estado en 1
+    usuario[index].estado=1;
+
+    //aviso que el usuario se dio de alta
+    printf("\nSe registro con exito. Su id es %d",usuario[index].idUsuario);
+
+}
+
+//Modificar usuario
+void modificarUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int cantidadSeries)
+{
+    int idUsuario;
+    int i;
+    int j;
+
+    printf("Ingrese su id de usuario: ");
+    scanf("%d", &idUsuario);
+
+    for (i=0; i<cantidadUsuarios; i++)
+    {
+        if (usuario[i].idUsuario==idUsuario)
+        {
+            printf("Ingrese su nombre:");
+            fflush(stdin);
+            gets(usuario[i].nombre);
+
+            printf("\n");
+
+            for (j=0; j<cantidadSeries; j++)
+            {
+                if (series[j].estado==1)
+                {
+                    printf("%d.%s\n",series[j].idSerie, series[j].nombre);
+                }
+            }
+
+            printf("\n");
+
+            printf("Ingrese el id de la serie que desea ver: ");
+            scanf("%d", &usuario[i].idSerie);
+
+            printf("\nSe modificó el usuario.\n");
+
+            break;
+        }
+
+    }
+
+
+}
+*/
