@@ -37,7 +37,7 @@ void inicializarUsuariosHardCode(eUsuario usuarios[])
 }
 
 //Lista de usuarios
-/*void mostrarListaUsuarios(eUsuario usuario[], int cantidad)
+void mostrarListaUsuarios(eUsuario usuario[], int cantidad)
 {
     int i;
 
@@ -49,7 +49,7 @@ void inicializarUsuariosHardCode(eUsuario usuarios[])
         }
     }
 
-}*/
+}
 
 //Lista de usuarios con el nombre de la serie que ven
 void mostrarUsuarioConSuSerie(eUsuario usuario[], int cantidadUsuario, eSerie serie[], int cantidadSerie)

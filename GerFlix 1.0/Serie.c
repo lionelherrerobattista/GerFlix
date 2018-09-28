@@ -41,20 +41,22 @@ void inicializarSeriesHardCode(eSerie series[])
     }
 }
 
-/*void mostrarListaSeries(eSerie series[], int cantidad)
+void mostrarListaSeries(eSerie series[], int cantidad)
 {
     int i;
+
+    printf("\nLista de series:\n");
 
     for (i=0; i<cantidad; i++)
     {
         if(series[i].estado==1)
         {
-            printf("%s\n", series[i].nombre);
+            printf("%d-- %s\n", i+1, series[i].nombre);
         }
     }
 
 
-}*/
+}
 
 
 
