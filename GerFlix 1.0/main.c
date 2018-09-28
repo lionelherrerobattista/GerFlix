@@ -41,6 +41,7 @@ int main()
                 mostrarUsuarioConSuSerie(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
                 break;
             case 4:
+                mostrarSeriesConUsuarios(listaDeSeries, TAMSERIE, listaDeUsuarios, TAMUSUARIO);
                 break;
         }
 
