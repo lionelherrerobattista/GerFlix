@@ -106,24 +106,25 @@ void altaUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int 
 
     //aviso que el usuario se dio de alta
     printf("\nSe registro con exito. Su id es: %d\n",usuario[index].idUsuario);
-
 }
 
-/*
+
 //Modificar usuario
 void modificarUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int cantidadSeries)
 {
     int idUsuario;
+    int flag=0; //0 No se encontró, 1 si se encontró
     int i;
     int j;
 
-    printf("Ingrese su id de usuario: ");
+    printf("\nIngrese su id de usuario: ");
     scanf("%d", &idUsuario);
 
     for (i=0; i<cantidadUsuarios; i++)
     {
         if (usuario[i].idUsuario==idUsuario)
         {
+            flag=1;
             printf("Ingrese su nombre:");
             fflush(stdin);
             gets(usuario[i].nombre);
@@ -143,13 +144,18 @@ void modificarUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[],
             printf("Ingrese el id de la serie que desea ver: ");
             scanf("%d", &usuario[i].idSerie);
 
-            printf("\nSe modificó el usuario.\n");
+            printf("Se modifico el usuario.\n");
 
-            break;
+            break; //Para que no siga iterando
         }
+    }
+
+    if(flag==0)
+    {
+        printf("No se encontro el usuario.\n");
 
     }
 
 
 }
-*/
+

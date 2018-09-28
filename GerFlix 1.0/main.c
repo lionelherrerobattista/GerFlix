@@ -60,6 +60,7 @@ int main()
 
         printf("\nIngrese una opcion:\n");
         printf("1.Alta Usuario\n");
+        printf("2.Modificar Usuario\n");
         printf("4.Salir\n");
 
         printf("\nOpcion: ");
@@ -71,6 +72,7 @@ int main()
                 altaUsuario(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
                 break;
             case 2:
+                modificarUsuario(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
                 break;
             case 3:
                 break;
