@@ -16,6 +16,8 @@ int main()
     inicializarUsuariosHardCode(listaDeUsuarios);
 
     int respuesta = 1;
+    int flag=0;
+
 
     do
     {
@@ -24,7 +26,8 @@ int main()
         printf("2. Mostrar el listado de usuarios\n");
         printf("3. Mostrar el listado de Usuarios con el nombre de la serie que ve\n");
         printf("4. Mostrar por cada serie, el nombre de los usuarios que la ven\n");
-        printf("5. Salir\n");
+        printf("5. Editar usuarios/series\n");
+        printf("6. Salir\n");
 
         printf("\nOpcion: ");
         scanf("%d", &respuesta);
@@ -43,30 +46,43 @@ int main()
             case 4:
                 mostrarSeriesConUsuarios(listaDeSeries, TAMSERIE, listaDeUsuarios, TAMUSUARIO);
                 break;
+            case 5:
+                flag=1;
+                break;
         }
 
 
+    }while (respuesta != 5 && respuesta!= 6);
+
+    while(flag==1)
+    {
+        respuesta=0;
+
+        printf("\nIngrese una opcion:\n");
+        printf("1.Alta Usuario\n");
+        printf("4.Salir\n");
+
+        printf("\nOpcion: ");
+        scanf("%d", &respuesta);
+
+        switch(respuesta)
+        {
+            case 1:
+                altaUsuario(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                flag=0;
+                break;
+
+
+        }
     }
-    while (respuesta != 5);
 
     /*
-    //Mostrar lista de series:
-        mostrarListaSeries(listaDeSeries, TAMSERIE);
-
-    printf("\n");
-
-    //Mostrar lista de usuarios:
-    mostrarListaUsuarios(listaDeUsuarios, TAMUSUARIO);
-
-    //Mostrar usuario con su serie:
-
-    mostrarUsuarioConSuSerie(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
-
-    //Mostrar, por cada serie, el nombre de los usuarios que la ven:
-
-    altaUsuario(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
-    printf(" \n");
-
     mostrarSeriesConUsuarios(listaDeSeries,TAMSERIE,listaDeUsuarios,TAMUSUARIO);
     printf(" \n");
 

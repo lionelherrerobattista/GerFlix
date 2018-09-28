@@ -64,7 +64,7 @@ void mostrarSeriesConUsuarios(eSerie series[], int cantidadSeries, eUsuario usua
     }
 }
 
-/*
+
 void altaUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int cantidadSeries)
 {
     int index;
@@ -85,12 +85,12 @@ void altaUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int 
     usuario[index].idUsuario=index+1000;
 
     //pido el nombre
-    printf("Ingrese su nombre: ");
+    printf("\nIngrese su nombre: ");
     fflush(stdin);
     gets(usuario[index].nombre);
-    printf("\n");
+    printf("\nSeries:\n");
 
-    //le pregunto qué serie quiere ver
+    //Muestro las series con el id y le pregunto qué serie quiere ver
     for (i=0; i<cantidadSeries; i++)
     {
         if (series[i].estado==1)
@@ -98,18 +98,18 @@ void altaUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int 
             printf("%d.%s\n",series[i].idSerie, series[i].nombre);
         }
     }
-    printf("\n");
-    printf("Ingrese el id de la serie que desea ver: ");
+    printf("\nIngrese el id de la serie que desea ver: ");
     scanf("%d", &usuario[index].idSerie);
 
     //pongo el estado en 1
     usuario[index].estado=1;
 
     //aviso que el usuario se dio de alta
-    printf("\nSe registro con exito. Su id es %d",usuario[index].idUsuario);
+    printf("\nSe registro con exito. Su id es: %d\n",usuario[index].idUsuario);
 
 }
 
+/*
 //Modificar usuario
 void modificarUsuario(eUsuario usuario[], int cantidadUsuarios, eSerie series[], int cantidadSeries)
 {
