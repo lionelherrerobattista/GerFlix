@@ -59,8 +59,9 @@ int main()
         respuesta=0;
 
         printf("\nIngrese una opcion:\n");
-        printf("1.Alta Usuario\n");
-        printf("2.Modificar Usuario\n");
+        printf("1.Alta usuario\n");
+        printf("2.Modificar usuario\n");
+        printf("3.Baja usuario\n");
         printf("4.Salir\n");
 
         printf("\nOpcion: ");
@@ -75,6 +76,7 @@ int main()
                 modificarUsuario(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
                 break;
             case 3:
+                bajaUsuario(listaDeUsuarios, TAMUSUARIO);
                 break;
             case 4:
                 flag=0;

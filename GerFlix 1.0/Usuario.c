@@ -53,28 +53,36 @@ void mostrarListaUsuarios(eUsuario usuario[], int cantidad)
 
 }
 
-/*
 
 //Dar de baja usuarios
 void bajaUsuario(eUsuario usuario[], int cantidadUsuarios)
 {
     int idUsuario;
     int i;
+    char respuesta= 'n';
 
     //pido el id del usuario
-    printf("Ingrese el id del usuario que desea dar de baja: ");
+    printf("\nIngrese el id del usuario que desea dar de baja: ");
     scanf("%d", &idUsuario);
 
-    //busco el id y cambio el estado a 0 (baja)
-    for (i=0; i<cantidadUsuarios; i++)
+    printf("Esta seguro que quiere darse de baja? (s/n)\n");
+    fflush(stdin);
+    scanf("%c", &respuesta);
+
+    if(respuesta=='s')
     {
-        if (usuario[i].idUsuario==idUsuario)
+        //busco el id y cambio el estado a 0 (baja)
+        for (i=0; i<cantidadUsuarios; i++)
         {
-            usuario[i].estado=0;
-            break;
+            if (usuario[i].idUsuario==idUsuario)
+            {
+                usuario[i].estado=0;
+                break;
+            }
         }
+
+        printf("Se dio de baja el usuario.\n");
     }
 
-    printf("\nSe dio de baja el usuario.");
+
 }
-*/

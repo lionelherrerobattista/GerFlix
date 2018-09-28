@@ -36,12 +36,12 @@
 	<stdlib.h>
 	"Usuario.h"
 
-1538145992 source:c:\users\alumno\desktop\nueva carpeta\gerflix\gerflix 1.0\main.c
+1538146419 source:c:\users\alumno\desktop\nueva carpeta\gerflix\gerflix 1.0\main.c
 	<stdio.h>
 	<stdlib.h>
 	"usuarioserie.h"
 
-1538141489 c:\users\alumno\desktop\nueva carpeta\gerflix\gerflix 1.0\usuario.h
+1538146419 c:\users\alumno\desktop\nueva carpeta\gerflix\gerflix 1.0\usuario.h
 
 1538137405 c:\users\alumno\desktop\nueva carpeta\gerflix\gerflix 1.0\serie.h
 
@@ -50,7 +50,7 @@
 	<string.h>
 	<stdio.h>
 
-1538143229 source:c:\users\alumno\desktop\nueva carpeta\gerflix\gerflix 1.0\usuario.c
+1538146755 source:c:\users\alumno\desktop\nueva carpeta\gerflix\gerflix 1.0\usuario.c
 	"Usuario.h"
 	<string.h>
 	<stdio.h>
@@ -59,7 +59,7 @@
 	"Usuario.h"
 	"Serie.h"
 
-1538145925 source:c:\users\alumno\desktop\nueva carpeta\gerflix\gerflix 1.0\usuarioserie.c
+1538146208 source:c:\users\alumno\desktop\nueva carpeta\gerflix\gerflix 1.0\usuarioserie.c
 	"usuarioserie.h"
 	<string.h>
 	<stdio.h>
