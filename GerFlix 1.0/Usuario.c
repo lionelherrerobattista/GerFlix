@@ -39,12 +39,15 @@ void inicializarUsuariosHardCode(eUsuario usuarios[])
 void mostrarListaUsuarios(eUsuario usuario[], int cantidad)
 {
     int i;
+    int k=1;
+
+    printf("\nUsuarios:\n");
 
     for(i=0; i<cantidad; i++)
     {
         if(usuario[i].estado==1)
         {
-            printf("%s\n", usuario[i].nombre);
+            printf("%d--%s\n", k++, usuario[i].nombre);
         }
     }
 

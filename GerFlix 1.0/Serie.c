@@ -51,7 +51,7 @@ void mostrarListaSeries(eSerie series[], int cantidad)
     {
         if(series[i].estado==1)
         {
-            printf("%d-- %s\n", i+1, series[i].nombre);
+            printf("%d--%s\n", i+1, series[i].nombre);
         }
     }
 

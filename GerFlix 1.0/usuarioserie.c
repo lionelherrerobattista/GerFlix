@@ -40,6 +40,7 @@ void mostrarSeriesConUsuarios(eSerie series[], int cantidadSeries, eUsuario usua
 {
     int i;//series
     int j;//usuarios
+    int k;
 
     printf("\n");
     for (i=0; i<cantidadSeries; i++)
@@ -48,12 +49,13 @@ void mostrarSeriesConUsuarios(eSerie series[], int cantidadSeries, eUsuario usua
         {
             printf("%s:\n", series[i].nombre);
 
-
+            k=1;
+            //flag para no imprimir la serie sin usuarios?
             for (j=0; j<cantidadUsuarios; j++)
             {
                 if(series[i].idSerie==usuarios[j].idSerie && usuarios[j].estado==1)
                 {
-                    printf("-%s\n", usuarios[j].nombre);
+                    printf("%d-%s\n", k++, usuarios[j].nombre);
                 }
             }
             printf("\n");
